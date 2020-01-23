@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>This is a test text</p>
+    <button id='yes' class='button--answer'>Yes</button><button id='no' class='button--answer'>No</button>
+    <script>
+        console.log('it works');
+        //Make an array with the relevant questions. 
+        const questions = [
+            'Do you use it',
+            'Do you recall the last time when?',
+            'Was it less than three months ago?',
+        ]
+
+        const eliminations = [
+            'If you die tomorrow, will you leave it to someone?',
+            'Are you willing to carry it until you die',
+        ]
+
+        const conclusions = [
+            'Let it go',
+            'Keep it',
+        ]
+
+        const answers = document.querySelectorAll('.button--answer');
+        let points = 1;
+        let questionSrc = questions;
+
+        function handleAnswer(e) {
+            const answer = e.currentTarget.id;
+            answer === 'yes' ? points += 0 : points--;
+
+            //TO DO 
+            //There's two categories, an elimination zone and an enquiry zone. 
+            // In the enquiry zone, if the counter rises above 3, you win. 
+
+            // If the counter is zero, switch to elimination questions.
+            // If the counter is smaller than 0, switch to 
+
+            points <= 0 ? questionSrc = eliminations : questionSrc = questions;
+
+            let question = questionSrc[points - 1];
+
+            console.log(points);
+            points < 0 ? console.log(conclusions[0]) : null;
+            points > [questions.length] ? console.log(conclusions[1]) : null;
+        }
+
+        handleClick = function (e) {
+            e.addEventListener('click', handleAnswer);
+        }
+
+        answers.forEach(handleClick);
+    </script>
+
+</body>
+
+</html>
