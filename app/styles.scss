@@ -1,8 +1,8 @@
 :root {
     --dark: black;
     --light: white;
-    --background: var(--dark);
-    --elements: var(--light);
+    --background: var(--light);
+    --elements: var(--dark);
 }
 
 $backgroundColor : var(--background);
@@ -18,7 +18,7 @@ html {
     background: $backgroundColor;
 }
 
-body {
+.container {
     height: 100vh;
 
     display: grid;
@@ -32,7 +32,7 @@ body {
     border-radius: 30px;
     border: 20px solid black;
     margin: 0;
-    background: white;
+    background: $backgroundColor;
 }
 
 main {

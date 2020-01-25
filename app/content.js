@@ -1,6 +1,16 @@
 console.log(' it works');
 const answers = document.querySelectorAll('nav>button');
 const words = document.querySelector('#main-text');
+const theme = document.querySelector('.button--switch-theme');
+const container = document.querySelector('.container');
+
+const themeSwitcher = function () {
+    const variable = 'red';
+    container.setAttribute('style', `--background: ${variable}`);
+    console.log('switch theme')
+};
+
+theme.addEventListener('click', themeSwitcher);
 
 //Text to be displayed on the page
 
@@ -44,12 +54,16 @@ function handleAnswer(e) {
     }
     currentArray = arrays[arrayIndex];
     display = currentArray[index];
-    words.textContent = `${display}`;
-    console.log(`ArrayIndex: ${arrayIndex}`);
-    console.log(`index: ${index}`);
-    console.log(currentArray);
-    console.log(currentArray[index]);
-    console.log(`----------`);
+    words.textContent = `
+                $ {
+                    display
+                }
+                `;
+    // console.log(`ArrayIndex: ${arrayIndex}`);
+    // console.log(`index: ${index}`);
+    // console.log(currentArray);
+    // console.log(currentArray[index]);
+    // console.log(`-- -- -- -- --`);
 }
 handleClick = function (e) {
     e.addEventListener('click', handleAnswer);

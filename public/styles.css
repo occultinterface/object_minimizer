@@ -1,8 +1,8 @@
 :root {
   --dark: black;
   --light: white;
-  --background: var(--dark);
-  --elements: var(--light); }
+  --background: var(--light);
+  --elements: var(--dark); }
 
 * {
   -webkit-box-sizing: border-box;
@@ -12,7 +12,7 @@
 html {
   background: var(--background); }
 
-body {
+.container {
   height: 100vh;
   display: grid;
   grid-template-rows: 1fr 3fr 1fr;
@@ -25,7 +25,7 @@ body {
   border-radius: 30px;
   border: 20px solid black;
   margin: 0;
-  background: white; }
+  background: var(--background); }
 
 main {
   text-align: center; }
