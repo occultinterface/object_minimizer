@@ -1,0 +1,44 @@
+:root {
+    --dark: black;
+    --light: white;
+    --background: var(--dark);
+    --elements: var(--light);
+}
+
+$backgroundColor : var(--background);
+$unit : 2rem;
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    background: $backgroundColor;
+}
+
+body {
+    height: 100vh;
+
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: $unit;
+
+
+    font-size: 1.5rem;
+    border-radius: 30px;
+    border: 20px solid black;
+    margin: 0;
+    background: white;
+}
+
+main {
+    text-align: center;
+}
+
+p {
+    max-width: 30ch;
+}
