@@ -5,7 +5,13 @@
     --elements: var(--dark);
 }
 
-$backgroundColor : var(--background);
+.dark{
+    --background: var(--dark);
+    --elements: var(--light);
+}
+
+$background: var(--background);
+$elements: var(--elements);
 $unit : 2rem;
 
 
@@ -14,8 +20,9 @@ $unit : 2rem;
     margin: 0;
 }
 
-html {
-    background: $backgroundColor;
+body {
+    background: $elements;
+    
 }
 
 .container {
@@ -30,9 +37,9 @@ html {
 
     font-size: 1.5rem;
     border-radius: 30px;
-    border: 20px solid black;
+    border: 20px solid $elements;
     margin: 0;
-    background: $backgroundColor;
+    background: $background;
 }
 
 main {
@@ -41,4 +48,5 @@ main {
 
 p {
     max-width: 30ch;
+    color: $elements;
 }

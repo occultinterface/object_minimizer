@@ -4,13 +4,17 @@
   --background: var(--light);
   --elements: var(--dark); }
 
+.dark {
+  --background: var(--dark);
+  --elements: var(--light); }
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0; }
 
-html {
-  background: var(--background); }
+body {
+  background: var(--elements); }
 
 .container {
   height: 100vh;
@@ -23,7 +27,7 @@ html {
   padding: 2rem;
   font-size: 1.5rem;
   border-radius: 30px;
-  border: 20px solid black;
+  border: 20px solid var(--elements);
   margin: 0;
   background: var(--background); }
 
@@ -31,4 +35,5 @@ main {
   text-align: center; }
 
 p {
-  max-width: 30ch; }
+  max-width: 30ch;
+  color: var(--elements); }
