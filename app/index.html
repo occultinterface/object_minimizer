@@ -15,21 +15,25 @@
     <div class="container">
         <header>
             <!--dark theme, contact, etc-->
-            <button class="button--switch-theme">Dark Theme</button>
+            <button class="button button--switch-theme">Dark Theme</button>
             <p class="counter--keep"></p>
             <p class="counter--relinquish"></p>
 
         </header>
         <main>
             <p id="main-text">
+                "For what are your possessions but things you keep and guard for fear you may need them tomorrow?
+                <br>~ <a href='http://www.katsandogz.com/ongiving.html' target="blank">Kahlil Gibran</a>
             </p>
         </main>
         <nav class="navigation--main">
-            <div class="navigation--main__answers">
-                <button id="yes" class="button--answer">Yes</button><button id="no" class="button--answer">No</button>
+            <button id="start" class="button button--start">Begin evaluation</button>
+            <div class="navigation--main__answers hide">
+                <button id="yes" class="button button--answer">Yes</button><button id="no"
+                    class="button button--answer">No</button>
             </div>
             <button id="restart" class="button--restart hide">Evaluate another Object</button>
-            <button id="back" class='button--back'>Go Back</button>
+            <button id="back" class='button--back hide'>Go Back</button>
         </nav>
     </div>
     <script src="content.js"></script>

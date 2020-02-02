@@ -1,11 +1,21 @@
 console.log(' it works');
 const answersContainer = document.querySelector('.navigation--main__answers');
+
+
 const answers = document.querySelectorAll('.button--answer');
+
 const restart = document.querySelector('.button--restart');
 const back = document.querySelector('.button--back');
+const start = document.querySelector('.button--start');
 const words = document.querySelector('#main-text');
 const theme = document.querySelector('.button--switch-theme');
 const container = document.querySelector('body');
+
+start.addEventListener('click', handleStart = () => {
+    words.textContent = `${display}`;
+    hide(start);
+    reveal(answersContainer);
+})
 
 // Hiding and showing elements
 hide = (target) => target.classList.add('hide');
@@ -50,7 +60,6 @@ let arrayIndex = 0;
 let index = 0;
 let currentArray = arrays[arrayIndex];
 let display = currentArray[index];
-words.textContent = `${display}`;
 let hash = 0;
 
 //Utilities
