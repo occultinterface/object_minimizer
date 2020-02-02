@@ -31,9 +31,25 @@ body {
   margin: 0;
   background: var(--background); }
 
+.button, .button--answer, .button--restart, .button--back {
+  border-radius: 50px;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+  font-size: 1rem;
+  border: 0; }
+
 main {
   text-align: center; }
 
 p {
   max-width: 30ch;
   color: var(--elements); }
+
+.hide {
+  display: none; }
