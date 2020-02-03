@@ -9,31 +9,36 @@
 </head>
 
 <body>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700i&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../public/styles.css">
     </link>
 
     <div class="container">
         <header>
             <!--dark theme, contact, etc-->
-            <button class="button button--switch-theme">Dark Theme</button>
-            <p class="counter--keep"></p>
-            <p class="counter--relinquish"></p>
+            <button class="button button--switch-theme"><span></span></button>
+            <div class="counters">
+                <p class="counter--keep">keep 0</p>
+                <p>x</p>
+                <p class="counter--give">0 give</p>
+            </div>
 
         </header>
         <main>
             <p id="main-text">
-                "For what are your possessions but things you keep and guard for fear you may need them tomorrow?
-                <br>~ <a href='http://www.katsandogz.com/ongiving.html' target="blank">Kahlil Gibran</a>
+                <span class="quote">For what are your possessions but things you keep and guard for fear you may need
+                    them tomorrow?</span>
+                <br><a class="author" href='http://www.katsandogz.com/ongiving.html' target="blank">Kahlil Gibran</a>
             </p>
         </main>
         <nav class="navigation--main">
-            <button id="start" class="button button--start">Begin evaluation</button>
+            <button id="start" class="button button--start"><span>Begin</span></button>
             <div class="navigation--main__answers hide">
-                <button id="yes" class="button button--answer">Yes</button><button id="no"
-                    class="button button--answer">No</button>
+                <button id="yes" class="button button--answer"><span>Yes</span></button><button id="no"
+                    class="button button--answer"><span>No</span></button>
             </div>
-            <button id="restart" class="button--restart hide">Evaluate another Object</button>
-            <button id="back" class='button--back hide'>Go Back</button>
+            <button id="restart" class="button button--restart hide"><span>Another</span></button>
+            <button id="back" class='button button--back hide'>Go Back</button>
         </nav>
     </div>
     <script src="content.js"></script>

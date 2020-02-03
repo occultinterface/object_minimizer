@@ -18,6 +18,9 @@ $background: var(--background);
 $elements: var(--elements);
 $unit : 2rem;
 
+@mixin textShadow{
+    text-shadow: 0 0 2px hsla(259, 61, 11, 0.4);
+}
 
 * {
     box-sizing: border-box;
@@ -25,49 +28,140 @@ $unit : 2rem;
 }
 
 body {
-    background: $elements;
+    background: #F4F3F3;
+    font-family: 'Lora', serif;
+}
 
+p{
+    @include textShadow;
+    max-width: 30ch;
+    color: $elements;
+    font-size: 1.2rem;
+    //line-height: 1.5rem;
+}
+
+.quote{
+    &:before{
+        content: ' “ ';
+        font-size: 2em;
+        font-family: serif;
+        // position: relative;
+        // bottom: 0.5rem;
+        display: block;
+        float: left;
+    }
+
+    &:after{
+        content: ' ” ';
+        display: block;
+        font-size: 2em;
+        font-family: serif;
+        line-height: 1em;
+        float: right;
+        // position: relative;
+        // top: 0.5rem;
+    }
+}
+
+.author{
+    color:rebeccapurple;
+    font-size: 1rem; 
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+
+
+header{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+}
+
+.counters{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+
+    p{
+        font-size: 1.2rem;
+        letter-spacing: 0.1rem;
+        font-style: italic;
+    }
 }
 
 .container {
     height: 100vh;
-
     display: grid;
     grid-template-rows: 1fr 3fr 1fr;
     justify-items: center;
     align-items: center;
     padding: calc(#{$unit}/2);
-
-    font-size: 1.5rem;
-    border-radius: 30px;
-    border: 20px solid $elements;
     margin: 0;
-    background: $background;
+    background: #F4F3F3;
 }
 
 
 .button {
+    @include textShadow;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-weight: bold;
     border-radius: 50px;
     display: grid;
     align-items: center;
     justify-content: center;
-    text-transform: uppercase;
-    font-size: 1rem;
+    text-transform: lowercase;
+    font-size: 1.5rem;
     border: 0;
+    letter-spacing: 0.1rem;
     padding: calc(#{$unit} /2);
+    background: #F4F3F3;
     color: $elements;
-    box-shadow: 0 5px 4px 10px var(--shadows);
+    box-shadow: 0 5px 0 0 #DDDBEA,
+                0 -5px 0 0 white;
 
+    &--answer{
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
+
+    &--switch-theme{
+        height: 30px;
+        width: 30px;
+    }
+
+
+}
+
+.navigation--main{
+    width: 100%; 
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    &__answers{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        //align-items: center;
+        justify-items: center;
+        width: 100%;
+        max-width: 460px;
+    }
 }
 
 main {
     text-align: center;
 }
 
-p {
-    max-width: 30ch;
-    color: $elements;
-}
+
 
 .hide {
     display: none;

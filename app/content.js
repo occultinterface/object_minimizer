@@ -24,10 +24,10 @@ reveal = (target) => target.classList.remove('hide');
 //Displaying counter of results
 const counter = new Map()
 counter.set('keep', 0);
-counter.set('relinquish', 0);
+counter.set('give', 0);
 
 setCounter = (result) => {
-    document.querySelector(".counter--" + result.toString() + "").innerHTML = `<p>${result} : </p><p>${counter.get(result)}</p>`
+    document.querySelector(".counter--" + result.toString() + "").innerHTML = `<p>${result} ${counter.get(result)}</p>`
 }
 
 counterUpdate = (result) => counter.set(result, (counter.get(result) + 1));
@@ -102,9 +102,9 @@ function handleAnswer(e) {
         // Update counter of results
         index === 1 ?
             counterUpdate('keep') :
-            counterUpdate('relinquish');
+            counterUpdate('give');
 
-        setCounter('relinquish');
+        setCounter('give');
         setCounter('keep');
     };
 

@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/occultinterface/object_minimizer#readme",
   "dependencies": {
+    "autoprefixer": "^9.7.4",
     "sass": "^1.25.1-test.1"
   },
   "devDependencies": {
